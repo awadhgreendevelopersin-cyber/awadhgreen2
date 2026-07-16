@@ -1,299 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Awadh Green Developers — Solar Panel Installation &amp; Service</title>
-<meta name="description" content="Awadh Green Developers provides professional solar panel installation and after-installation service, serving 45+ cities across India from our Lucknow headquarters.">
-<link rel="icon" href="assets/img/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awadh Green Developers | Professional Solar Solutions</title>
+    <!-- Icons के लिए FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --primary-color: #0b8043;
+            --secondary-color: #fbbc04;
+            --text-dark: #333;
+            --text-light: #fff;
+            --bg-light: #f4f7f6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        h1, h2, h3 { color: var(--text-dark); }
+        a { text-decoration: none; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--primary-color); font-weight: 700; }
+        section { padding: 80px 0; }
+
+        /* --- Navbar --- */
+        nav { background: #fff; padding: 10px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+        .logo img { height: 60px; border-radius: 50%; } /* Logo styling */
+        .logo span { color: var(--secondary-color); }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--text-dark); font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* --- Full Screen Hero Banner --- */
+        .hero { height: 100vh; background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1920&auto=format&fit=crop') center/cover; display: flex; align-items: center; text-align: center; color: var(--text-light); }
+        .hero-content h1 { font-size: 4rem; color: var(--text-light); margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
+        .btn { padding: 12px 30px; background: var(--secondary-color); color: var(--text-dark); font-weight: 700; border-radius: 5px; font-size: 1.1rem; transition: 0.3s; display: inline-block; border: none; cursor: pointer; }
+        .btn:hover { background: var(--primary-color); color: var(--text-light); }
+
+        /* --- Brand Logos --- */
+        .brands { background: #fff; padding: 30px 0; border-bottom: 1px solid #ddd; }
+        .brand-track { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; font-weight: bold; font-size: 1.5rem; color: #555; }
+        .brand-item { display: flex; align-items: center; gap: 10px; }
+
+        /* --- Services --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-bottom: 4px solid transparent; }
+        .service-card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--primary-color); }
+        .service-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* --- Subsidy Info --- */
+        .subsidy { background: var(--primary-color); color: var(--text-light); text-align: center; }
+        .subsidy .section-title { color: var(--text-light); }
+        .subsidy-box { background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; max-width: 800px; margin: 0 auto; border: 1px dashed var(--secondary-color); }
+
+        /* --- EMI Calculator --- */
+        .calculator { background: #fff; }
+        .calc-wrapper { max-width: 600px; margin: 0 auto; background: var(--bg-light); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .input-group input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        #emi-result { margin-top: 20px; font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-align: center; }
+
+        /* --- Projects Gallery --- */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; transition: 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); }
+
+        /* --- Reviews --- */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .review-card { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .stars { color: var(--secondary-color); margin-bottom: 15px; }
+
+        /* --- Contact & Map --- */
+        .contact-wrapper { display: flex; gap: 40px; flex-wrap: wrap; }
+        .contact-info, .contact-form, .map-container { flex: 1; min-width: 300px; }
+        .contact-info p { font-size: 1.1rem; margin-bottom: 15px; }
+        .contact-info i { color: var(--primary-color); margin-right: 10px; font-size: 1.2rem; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Poppins', sans-serif; }
+        .map-container iframe { width: 100%; height: 100%; min-height: 300px; border: none; border-radius: 10px; }
+
+        /* --- Floating Buttons --- */
+        .floating-btns { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 15px; z-index: 999; }
+        .float-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: white; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+        .whatsapp { background: #25D366; }
+        .call { background: #007bff; }
+        .float-btn:hover { transform: scale(1.1); color: white; }
+
+        /* --- Footer --- */
+        footer { background: #222; color: #ccc; text-align: center; padding: 30px 20px; margin-top: 40px; line-height: 1.8; }
+        footer h3 { color: #fff; margin-bottom: 10px; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header" id="top">
-  <div class="wrap header-inner">
-    <a class="brand" href="#top">
-      <img src="assets/img/logo.png" alt="Awadh Green Developers logo" class="brand-mark">
-      <span class="brand-text">
-        <span class="brand-name">Awadh Green<br>Developers</span>
-      </span>
-    </a>
-
-    <nav class="main-nav" id="main-nav">
-      <a href="#services">Services</a>
-      <a href="#how-it-works">Process</a>
-      <a href="#savings">Savings</a>
-      <a href="#coverage">Coverage</a>
-      <a href="#contact">Contact</a>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="1000174978.jpg" alt="Awadh Green Developers Logo">
+                <div>Awadh <span>Green</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#subsidy">Subsidy</a>
+                <a href="#gallery">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <div class="header-actions">
-      <a class="btn btn-ghost" href="tel:+918423948053">Call Now</a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- Hero Banner -->
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Awadh Green Developers</h1>
+            <p>बेहतरीन Solar Panel इंस्टालेशन सर्विस। आज ही सोलर लगवाएं और बिजली का बिल शून्य करें।</p>
+            <a href="#contact" class="btn">Get Free Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <!-- Trusted Brands -->
+    <div class="brands">
+        <div class="container brand-track">
+            <div class="brand-item"><i class="fa-solid fa-check-circle" style="color:var(--primary-color)"></i> Waaree</div>
+            <div class="brand-item"><i class="fa-solid fa-check-circle" style="color:var(--primary-color)"></i> Tata Power Solar</div>
+            <div class="brand-item"><i class="fa-solid fa-check-circle" style="color:var(--primary-color)"></i> Havells</div>
+            <div class="brand-item"><i class="fa-solid fa-check-circle" style="color:var(--primary-color)"></i> Polycab</div>
+        </div>
     </div>
-  </div>
-</header>
 
-<main id="main">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Solar EPC &amp; Service · Now in 45+ Cities</p>
-        <h1>Turn rooftop sunlight into a lighter electricity bill.</h1>
-        <p class="hero-sub">Awadh Green Developers designs, installs and services solar power systems for homes and businesses — from the first site visit to years of after-sales support.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="tel:+918423948053">Call for a Free Site Visit</a>
-          <a class="btn btn-outline" href="https://wa.me/918423948053" target="_blank" rel="noopener">WhatsApp Us</a>
+    <!-- Services -->
+    <section id="services" class="container">
+        <h2 class="section-title">Our Solar Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-plug-circle-check"></i>
+                <h3>On-Grid Solar System</h3>
+                <p>सीधे ग्रिड से जुड़ा हुआ सिस्टम। बिजली का बिल कम करने और नेट मीटरिंग के जरिए पैसे बचाने के लिए सबसे बेहतरीन।</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-car-battery"></i>
+                <h3>Off-Grid Solar System</h3>
+                <p>बैटरी बैकअप के साथ, उन इलाकों के लिए जहाँ बिजली कटौती ज्यादा होती है। ग्रिड के बिना पूरी तरह आत्मनिर्भर।</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Hybrid Solar System</h3>
+                <p>ऑन-ग्रिड और ऑफ-ग्रिड का बेहतरीन कॉम्बिनेशन। बैटरी बैकअप भी और बिजली विभाग को एक्स्ट्रा बिजली बेचने की सुविधा भी।</p>
+            </div>
         </div>
-        <div class="hero-contacts">
-          <a href="tel:+918423948053">+91 84239 48053</a>
-          <span class="dot">·</span>
-          <a href="tel:+919996801232">+91 99968 01232</a>
-        </div>
-      </div>
+    </section>
 
-      <div class="hero-visual" aria-hidden="true">
-        <svg id="sun-diagram" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
-          <!-- sun -->
-          <g id="sun-group">
-            <circle cx="90" cy="80" r="34" fill="var(--sunbeam)"/>
-            <g id="sun-rays" stroke="var(--sunbeam)" stroke-width="5" stroke-linecap="round">
-              <line x1="90" y1="20" x2="90" y2="4"/>
-              <line x1="140" y1="40" x2="151" y2="29"/>
-              <line x1="30" y1="40" x2="19" y2="29"/>
-              <line x1="150" y1="80" x2="166" y2="80"/>
-              <line x1="140" y1="120" x2="151" y2="131"/>
-            </g>
-          </g>
-          <!-- energy path -->
-          <path id="flow-path" d="M 100 105 C 140 150, 170 160, 210 180" fill="none" stroke="var(--sunbeam)" stroke-width="3" stroke-dasharray="6 8" stroke-linecap="round"/>
-          <!-- panel -->
-          <g id="panel-group" transform="translate(175,175)">
-            <rect x="0" y="0" width="110" height="70" rx="6" fill="var(--canopy)"/>
-            <g stroke="var(--mist)" stroke-width="2" opacity="0.5">
-              <line x1="0" y1="23" x2="110" y2="23"/>
-              <line x1="0" y1="46" x2="110" y2="46"/>
-              <line x1="27" y1="0" x2="27" y2="70"/>
-              <line x1="55" y1="0" x2="55" y2="70"/>
-              <line x1="82" y1="0" x2="82" y2="70"/>
-            </g>
-          </g>
-          <path id="flow-path-2" d="M 260 210 C 290 240, 300 250, 300 280" fill="none" stroke="var(--sunbeam)" stroke-width="3" stroke-dasharray="6 8" stroke-linecap="round"/>
-          <!-- home -->
-          <g id="home-group" transform="translate(230,280)">
-            <rect x="0" y="30" width="120" height="70" fill="var(--bark)"/>
-            <polygon points="-8,30 60,-18 128,30" fill="var(--canopy)"/>
-            <rect x="48" y="60" width="24" height="40" fill="var(--mist)"/>
-            <circle id="bulb" cx="95" cy="55" r="7" fill="var(--sunbeam)" opacity="0.25"/>
-          </g>
-        </svg>
-        <p class="visual-caption">Sunlight → Panel → Home Power</p>
-      </div>
+    <!-- Subsidy Section -->
+    <section id="subsidy" class="subsidy">
+        <div class="container">
+            <h2 class="section-title">Government Subsidy Information</h2>
+            <div class="subsidy-box">
+                <h3><i class="fa-solid fa-indian-rupee-sign"></i> PM Surya Ghar: Muft Bijli Yojana</h3>
+                <p style="margin-top: 15px; font-size: 1.1rem;">
+                    भारत सरकार द्वारा घर की छत पर सोलर पैनल लगाने पर भारी सब्सिडी दी जा रही है। 
+                    <br><br>
+                    <strong>1 kW से 3 kW तक:</strong> ₹30,000 से ₹78,000 तक की सीधी सब्सिडी आपके बैंक खाते में।<br>
+                    हम आपके लिए सब्सिडी का पूरा पेपरवर्क और आवेदन खुद प्रोसेस करते हैं।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMI Calculator -->
+    <section id="calculator" class="calculator container">
+        <h2 class="section-title">Solar Loan EMI Calculator</h2>
+        <div class="calc-wrapper">
+            <div class="input-group">
+                <label>Loan Amount (लोन की राशि - ₹)</label>
+                <input type="number" id="loanAmount" placeholder="Example: 100000" value="100000">
+            </div>
+            <div class="input-group">
+                <label>Interest Rate (ब्याज दर - %)</label>
+                <input type="number" id="interestRate" placeholder="Example: 8.5" value="8.5" step="0.1">
+            </div>
+            <div class="input-group">
+                <label>Tenure (कितने साल के लिए - Years)</label>
+                <input type="number" id="tenureYears" placeholder="Example: 5" value="5">
+            </div>
+            <button class="btn" onclick="calculateEMI()" style="width: 100%;">Calculate EMI</button>
+            <div id="emi-result">Monthly EMI: ₹0</div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-wrapper">
+            
+            <!-- Contact Details -->
+            <div class="contact-info">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">Reach Out To Us</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 8423948053</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9996801232</p>
+                <p><i class="fa-solid fa-location-dot"></i> <strong>Office:</strong> MEENA PALACE TWO, HANS KHEDA PARA, MANAK NAGAR, LUCKNOW - 226301</p>
+                <p><i class="fa-solid fa-building"></i> <strong>Branches:</strong> Available in 45+ Cities</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <input type="text" name="name" placeholder="आपका नाम (Full Name)" required>
+                    <input type="tel" name="phone" placeholder="फ़ोन नंबर (Phone Number)" required>
+                    <textarea name="message" rows="4" placeholder="आपकी जरूरत (Requirement details)"></textarea>
+                    <button type="submit" class="btn" style="width: 100%;">Send Request</button>
+                </form>
+            </div>
+            
+            <!-- Google Map Embed -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.39343389445!2d80.8596653!3d26.8466937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp & Call Buttons -->
+    <div class="floating-btns">
+        <a href="https://wa.me/918423948053?text=Hello%20Awadh%20Green%20Developers,%20I%20need%20solar%20panel%20info." class="float-btn whatsapp" target="_blank" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+918423948053" class="float-btn call" title="Call Now">
+            <i class="fa-solid fa-phone"></i>
+        </a>
     </div>
-  </section>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="wrap">
-      <p class="eyebrow">What We Do</p>
-      <h2>Installation and service, under one roof.</h2>
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-icon">☀</div>
-          <h3>Solar Panel Installation</h3>
-          <p>Rooftop and ground-mounted solar systems for homes, offices and commercial sites — sized to your roof and your electricity usage.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🔧</div>
-          <h3>Maintenance &amp; Service</h3>
-          <p>Periodic cleaning, inspection and repair to keep your panels performing well through every season, long after installation day.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">📍</div>
-          <h3>Site Survey &amp; Consultation</h3>
-          <p>A free on-site visit to assess your roof, shading and power needs before we recommend a system that fits.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <h3>Awadh Green Developers</h3>
+        <p>MEENA PALACE TWO, HANS KHEDA PARA, MANAK NAGAR, LUCKNOW - 226301</p>
+        <p>Branch Offices in 45+ Cities</p>
+        <p>Call Us: +91 8423948053, +91 9996801232</p>
+        <p style="margin-top: 15px; font-size: 0.9rem;">&copy; 2026 Awadh Green Developers. All Rights Reserved.</p>
+    </footer>
 
-  <!-- HOW IT WORKS -->
-  <section class="section section-alt" id="how-it-works">
-    <div class="wrap">
-      <p class="eyebrow">Process</p>
-      <h2>From first call to switched-on panels.</h2>
-      <ol class="steps">
-        <li class="step">
-          <span class="step-num">01</span>
-          <h3>Site visit &amp; survey</h3>
-          <p>Our team visits your property to check roof space, sunlight and current electricity consumption.</p>
-        </li>
-        <li class="step">
-          <span class="step-num">02</span>
-          <h3>System design &amp; quote</h3>
-          <p>We recommend a system size and give you a clear quote, matched to your budget and needs.</p>
-        </li>
-        <li class="step">
-          <span class="step-num">03</span>
-          <h3>Professional installation</h3>
-          <p>Our technicians install and wire the system, and walk you through how it works before we leave.</p>
-        </li>
-        <li class="step">
-          <span class="step-num">04</span>
-          <h3>Ongoing service</h3>
-          <p>We stay on call for cleaning, inspection and repairs, so your system keeps performing for years.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
+    <!-- JavaScript for EMI Calculator -->
+    <script>
+        function calculateEMI() {
+            let p = document.getElementById('loanAmount').value;
+            let r = document.getElementById('interestRate').value;
+            let n = document.getElementById('tenureYears').value;
 
-  <!-- WHY SOLAR -->
-  <section class="section" id="why-solar">
-    <div class="wrap">
-      <p class="eyebrow">Why Solar</p>
-      <h2>Fewer rupees to the grid, more sunlight on your roof.</h2>
-      <div class="benefit-grid">
-        <div class="benefit">
-          <h3>Lower electricity bills</h3>
-          <p>Every unit you generate is a unit you don't buy from the grid.</p>
-        </div>
-        <div class="benefit">
-          <h3>Clean, renewable power</h3>
-          <p>Solar energy produces no emissions once your system is running.</p>
-        </div>
-        <div class="benefit">
-          <h3>Low upkeep</h3>
-          <p>Panels have no moving parts — occasional cleaning and checks are usually enough.</p>
-        </div>
-        <div class="benefit">
-          <h3>A long-term asset</h3>
-          <p>A well-installed system keeps generating power for decades.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            if (p === "" || r === "" || n === "") {
+                document.getElementById('emi-result').innerText = "Please enter all values";
+                return;
+            }
 
-  <!-- SAVINGS CALCULATOR -->
-  <section class="section section-alt" id="savings">
-    <div class="wrap">
-      <p class="eyebrow">Estimate</p>
-      <h2>See roughly what solar could save you.</h2>
-      <p class="section-lead">Enter your average monthly electricity bill for a rough, indicative estimate. This isn't a quote — book a free site visit for exact numbers.</p>
+            let principal = parseFloat(p);
+            let ratePerMonth = parseFloat(r) / 12 / 100;
+            let totalMonths = parseFloat(n) * 12;
 
-      <div class="calculator">
-        <div class="calc-input">
-          <label for="bill-input">Average monthly electricity bill (₹)</label>
-          <input type="number" id="bill-input" inputmode="numeric" min="0" placeholder="e.g. 3000">
-          <input type="range" id="bill-slider" min="500" max="20000" step="100" value="3000">
-        </div>
-        <div class="calc-results">
-          <div class="calc-result">
-            <span class="calc-label">Estimated monthly savings</span>
-            <span class="calc-value" id="monthly-savings">₹ —</span>
-          </div>
-          <div class="calc-result">
-            <span class="calc-label">Estimated yearly savings</span>
-            <span class="calc-value" id="yearly-savings">₹ —</span>
-          </div>
-        </div>
-      </div>
-      <p class="calc-disclaimer">Indicative only — actual savings depend on your roof, sunlight hours, system size and consumption pattern. Government subsidies may reduce your upfront cost further; ask us about current eligibility.</p>
-    </div>
-  </section>
-
-  <!-- COVERAGE -->
-  <section class="section" id="coverage">
-    <div class="wrap coverage-inner">
-      <div>
-        <p class="eyebrow">Our Reach</p>
-        <h2>Headquartered in Lucknow. Serving 45+ cities.</h2>
-        <p class="section-lead">We started in Lucknow and now run branch operations across more than 45 cities in India, bringing the same installation and service standard wherever we go.</p>
-        <div class="coverage-stat">
-          <span class="stat-num">45+</span>
-          <span class="stat-label">Cities served</span>
-        </div>
-      </div>
-      <svg class="hub-diagram" viewBox="0 0 300 300" aria-hidden="true">
-        <g stroke="var(--leaf)" stroke-width="1.5" opacity="0.55">
-          <line x1="150" y1="150" x2="60" y2="70"/>
-          <line x1="150" y1="150" x2="230" y2="55"/>
-          <line x1="150" y1="150" x2="260" y2="150"/>
-          <line x1="150" y1="150" x2="230" y2="245"/>
-          <line x1="150" y1="150" x2="70" y2="235"/>
-          <line x1="150" y1="150" x2="45" y2="150"/>
-          <line x1="150" y1="150" x2="95" y2="55"/>
-          <line x1="150" y1="150" x2="205" y2="235"/>
-        </g>
-        <g fill="var(--leaf)" opacity="0.85">
-          <circle cx="60" cy="70" r="5"/>
-          <circle cx="230" cy="55" r="5"/>
-          <circle cx="260" cy="150" r="5"/>
-          <circle cx="230" cy="245" r="5"/>
-          <circle cx="70" cy="235" r="5"/>
-          <circle cx="45" cy="150" r="5"/>
-          <circle cx="95" cy="55" r="5"/>
-          <circle cx="205" cy="235" r="5"/>
-        </g>
-        <circle cx="150" cy="150" r="16" fill="var(--canopy)"/>
-        <circle cx="150" cy="150" r="16" fill="none" stroke="var(--sunbeam)" stroke-width="2.5"/>
-        <text x="150" y="185" text-anchor="middle" class="hub-label">Lucknow HQ</text>
-      </svg>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <div class="wrap contact-inner">
-      <div class="contact-info">
-        <p class="eyebrow">Get In Touch</p>
-        <h2>Talk to us about your rooftop.</h2>
-        <dl class="contact-list">
-          <div>
-            <dt>Office Address</dt>
-            <dd>Meena Palace Two, Hans Kheda Para,<br>Manak Nagar, Lucknow – 226301</dd>
-          </div>
-          <div>
-            <dt>Phone</dt>
-            <dd><a href="tel:+918423948053">+91 84239 48053</a><br><a href="tel:+919996801232">+91 99968 01232</a></dd>
-          </div>
-        </dl>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="tel:+918423948053">Call Now</a>
-          <a class="btn btn-outline" href="https://wa.me/918423948053" target="_blank" rel="noopener">WhatsApp Us</a>
-        </div>
-      </div>
-      <div class="contact-map">
-        <iframe
-          title="Awadh Green Developers office location"
-          src="https://www.google.com/maps?q=Meena%20Palace%20Two%2C%20Hans%20Kheda%20Para%2C%20Manak%20Nagar%2C%20Lucknow%20226301&output=embed"
-          width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="footer-brand">
-      <img src="assets/img/logo.png" alt="Awadh Green Developers logo" class="footer-mark">
-      <span>Awadh Green Developers</span>
-    </div>
-    <p class="footer-note">Solar panel installation &amp; service · Lucknow, India · 45+ cities</p>
-    <p class="footer-copy">© <span id="year"></span> Awadh Green Developers. All rights reserved.</p>
-  </div>
-</footer>
-
-<script src="assets/js/script.js"></script>
+            let emi = principal * ratePerMonth * Math.pow(1 + ratePerMonth, totalMonths) / (Math.pow(1 + ratePerMonth, totalMonths) - 1);
+            
+            document.getElementById('emi-result').innerText = "Monthly EMI: ₹" + Math.round(emi).toLocaleString('en-IN');
+        }
+    </script>
 </body>
 </html>
