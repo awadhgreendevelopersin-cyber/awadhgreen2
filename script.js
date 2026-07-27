@@ -148,81 +148,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
 
-    }); /*=========================================
-    EMI CALCULATOR
-    =========================================*/
-
-    const systemSize = document.getElementById("systemSize");
-
-    const systemPrice = document.getElementById("systemPrice");
-
-    const downPayment = document.getElementById("downPayment");
-
-    const emiMonths = document.getElementById("emiMonths");
-
+    });
     const calculateBtn = document.getElementById("calculateBtn");
 
-    const monthlyEMI = document.getElementById("monthlyEMI");
+if (calculateBtn) {
+    calculateBtn.addEventListener("click", function () {
 
-    const totalAmount = document.getElementById("totalAmount");
+        const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+        const interestRate = parseFloat(document.getElementById("interestRate").value);
+        const years = parseFloat(document.getElementById("loanYears").value);
 
-    if (calculateBtn) {
+        if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(years)) {
+            alert("Please enter valid values.");
+            return;
+        }
 
-        calculateBtn.addEventListener("click", function () {
+        const r = interestRate / 12 / 100;
+        const n = years * 12;
 
-            const price = Number(systemPrice.value);
+        const emi = (loanAmount * r * Math.pow(1 + r, n)) /
+                    (Math.pow(1 + r, n) - 1);
 
-            const down = Number(downPayment.value);
-
-            const months = Number(emiMonths.value);
-
-            if (price <= 0 || months <= 0) {
-
-                alert("Please enter valid values.");
-
-                return;
-
-            }
-
-            const loanAmount = price - down;
-
-            const annualInterest = 10;
-
-            const monthlyInterest = annualInterest / 12 / 100;
-
-            const emi = (
-
-                loanAmount *
-
-                monthlyInterest *
-
-                Math.pow(1 + monthlyInterest, months)
-
-            ) /
-
-            (
-
-                Math.pow(1 + monthlyInterest, months) - 1
-
-            );
-
-            if (monthlyEMI) {
-
-                monthlyEMI.innerText = "₹ " + emi.toFixed(0);
-
-            }
-
-            if (totalAmount) {
-
-                totalAmount.innerText =
-
-                    "₹ " + (emi * months).toFixed(0);
-
-            }
-
-        });
-
-    }
+        document.getElementById("emiResult").innerHTML =
+            "₹" + emi.toFixed(0) + " / Month";
+    });
+}
 
     /*=========================================
     AUTO PRICE UPDATE
